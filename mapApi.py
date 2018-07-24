@@ -1,4 +1,4 @@
-# @Time    : 2018/5/20 10:13
+# @Time    : 2018/5/20 14:25
 # @Author  : sunhui
 # @FileName: mapApi.py
 # @Software: vscode
@@ -17,7 +17,7 @@ line = 1
 def getpois(cityname, keywords):
     i = 1
     poilist = []
-    while True : #使用while循环不断分页获取数据
+    while True : # 使用while循环不断分页获取数据
        result = getpoi_page(cityname, keywords, i)
        result = json.loads(result)  # 将字符串转换为json
        if result['count'] == '0':
